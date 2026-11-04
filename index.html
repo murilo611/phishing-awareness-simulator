@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1220">
+    <meta name="description" content="An interactive, browser-based phishing awareness training simulator.">
+    <title>Phishing Awareness Simulator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#dashboard" data-view="dashboard" aria-label="Phishing Awareness Simulator home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 3 4.5 6v5.1c0 4.6 3.2 8.8 7.5 9.9 4.3-1.1 7.5-5.3 7.5-9.9V6L12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+              <path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="brand-copy">
+            <strong>SignalSafe</strong>
+            <span>SECURITY AWARENESS</span>
+          </span>
+        </a>
+
+        <p class="nav-caption">WORKSPACE</p>
+        <nav class="primary-nav">
+          <a class="nav-link is-active" href="#dashboard" data-view="dashboard" aria-current="page">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg>
+            <span>Dashboard</span>
+          </a>
+          <a class="nav-link" href="#training" data-view="training">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21V5.5Z"/><path d="M4 17.5A2.5 2.5 0 0 1 6.5 15H20M8 7h8M8 10h6"/></svg>
+            <span>Training</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+        <div class="privacy-card">
+          <span class="privacy-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 4.5 6v5.1c0 4.6 3.2 8.8 7.5 9.9 4.3-1.1 7.5-5.3 7.5-9.9V6L12 3Z" stroke="currentColor" stroke-width="1.6"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <strong>Safe by design</strong>
+          <p>Practice with fictional emails. No links, data collection, or real-world risk.</p>
+        </div>
+        <div class="sidebar-footer">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Offline training mode</span>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="mobile-brand">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 4.5 6v5.1c0 4.6 3.2 8.8 7.5 9.9 4.3-1.1 7.5-5.3 7.5-9.9V6L12 3Z" stroke="currentColor" stroke-width="1.7"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <strong>SignalSafe</strong>
+          </div>
+          <div class="breadcrumb"><span>Workspace</span><span class="breadcrumb-separator">/</span><strong id="breadcrumb-current">Dashboard</strong></div>
+          <div class="topbar-meta"><span class="topbar-status"><span class="status-dot" aria-hidden="true"></span> Training environment</span></div>
+        </header>
+
+        <section class="view dashboard-view" id="dashboard-view" aria-labelledby="dashboard-title">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-line"></span> SECURITY AWARENESS TRAINING</p>
+              <h1 id="dashboard-title">Phishing Awareness <span>Simulator</span></h1>
+              <p class="page-description">Build sharper instincts for your inbox. Review fictional emails, spot phishing signals, and practice safer decisions.</p>
+            </div>
+            <span class="environment-badge"><span class="status-dot" aria-hidden="true"></span> Safe simulation</span>
+          </div>
+
+          <section class="hero-card" aria-labelledby="hero-title">
+            <div class="hero-content">
+              <div class="hero-tag"><span class="tag-spark" aria-hidden="true">✦</span> YOUR NEXT STEP IN CYBER AWARENESS</div>
+              <h2 id="hero-title">Pause. Inspect.<br><span>Make the safer call.</span></h2>
+              <p>Mix email simulations with quick decision-making challenges. No pressure, just practical learning.</p>
+              <button class="button button-primary" type="button" data-action="start">
+                Start training
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="hero-footnote"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.8 3 3.8v3.4c0 3.1 2.1 5.9 5 6.6 2.9-.7 5-3.5 5-6.6V3.8l-5-2Z" stroke="currentColor" stroke-width="1.2"/><path d="m5.9 7.8 1.4 1.4 2.8-2.8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Private by design · Nothing is saved or sent</div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+              <div class="visual-glow"></div>
+              <div class="visual-ring ring-one"></div>
+              <div class="visual-ring ring-two"></div>
+              <div class="visual-envelope">
+                <svg viewBox="0 0 112 90" fill="none"><rect x="9" y="15" width="94" height="62" rx="10" fill="#17283c" stroke="#38bdf8" stroke-opacity=".62" stroke-width="2"/><path d="m13 22 38.6 29.5a7 7 0 0 0 8.8 0L99 22" stroke="#70d8f4" stroke-width="3" stroke-linecap="round"/><path d="m13 70 29-24m57 24L70 46" stroke="#2d91bd" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <div class="visual-shield"><svg viewBox="0 0 40 40" fill="none"><path d="M20 5 8 9.8v8.1c0 7.4 5.1 14.1 12 15.9 6.9-1.8 12-8.5 12-15.9V9.8L20 5Z" stroke="currentColor" stroke-width="2"/><path d="m15.5 19.5 3 3 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="visual-spark spark-a">✦</div><div class="visual-spark spark-b">✧</div>
+              <div class="visual-label"><span class="status-dot" aria-hidden="true"></span> INBOX CHECK</div>
+            </div>
+          </section>
+
+          <div class="dashboard-grid">
+            <section class="panel overview-panel" aria-labelledby="overview-title">
+              <div class="panel-heading">
+                <div><p class="eyebrow">YOUR LEARNING PATH</p><h2 id="overview-title">Training overview</h2></div>
+                <span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5m0 14h16M8 15l3-4 3 2 5-7"/></svg></span>
+              </div>
+              <div class="overview-stats">
+                <div class="stat-block"><span class="stat-value">10</span><span class="stat-label">Mixed questions</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat-block"><span class="stat-value">~5 <small>min</small></span><span class="stat-label">Estimated time</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat-block"><span class="stat-value">100 <small>pts</small></span><span class="stat-label">Possible score</span></div>
+              </div>
+              <div class="progress-summary">
+                <div class="progress-copy"><span>Overall progress</span><strong id="dashboard-progress-label">Ready to begin</strong></div>
+                <div class="progress-track" role="progressbar" aria-label="Training progress" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="dashboard-progress"><span id="dashboard-progress-fill"></span></div>
+              </div>
+            </section>
+
+            <aside class="tip-card" aria-labelledby="tip-title">
+              <div class="tip-topline"><span class="tip-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6m-5 3h4m-2-19a7 7 0 0 0-4 12.7c.8.6 1.3 1.2 1.5 2.3h5c.2-1.1.7-1.7 1.5-2.3A7 7 0 0 0 12 2Z"/></svg></span><span>QUICK AWARENESS TIP</span></div>
+              <h2 id="tip-title">Look beyond the display name.</h2>
+              <p>A familiar name can be easy to copy. Check the full sender address and its domain before you trust an unexpected request.</p>
+              <div class="tip-source"><span class="tip-source-line"></span> A good habit for every inbox</div>
+            </aside>
+          </div>
+          <footer class="page-footer"><span>SignalSafe <span class="footer-dot">·</span> Phishing Awareness Simulator</span><span>Educational use only <span class="footer-dot">·</span> Version 1.0</span></footer>
+        </section>
+
+        <section class="view training-view" id="training-view" aria-labelledby="training-title" hidden>
+          <div class="training-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-line"></span> INTERACTIVE EXERCISE</p>
+              <h1 id="training-title">Read the signal.<br><span>Choose what comes next.</span></h1>
+              <p class="page-description">Alternate between email previews and short decision-making exercises.</p>
+            </div>
+            <button class="button button-quiet" type="button" data-action="dashboard">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m12.5 4-6 6 6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Exit training
+            </button>
+          </div>
+          <div class="training-layout">
+            <aside class="training-aside">
+              <section class="panel session-panel">
+                <div class="session-label">YOUR SESSION</div>
+                <div class="session-progress-copy"><strong id="session-count">01</strong><span> / 10</span></div>
+                <div class="progress-track session-track" role="progressbar" aria-label="Question progress" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="session-progress"><span id="session-progress-fill"></span></div>
+                <div class="session-details"><span>Current score</span><strong><span id="current-score">0</span><small> pts</small></strong></div>
+              </section>
+              <section class="panel checklist-panel">
+                <p class="eyebrow">QUICK CHECKLIST</p>
+                <h2>Before you decide</h2>
+                <ul class="checklist">
+                  <li><span class="checklist-icon" aria-hidden="true">01</span><span>Check who sent it</span></li>
+                  <li><span class="checklist-icon" aria-hidden="true">02</span><span>Notice the tone and urgency</span></li>
+                  <li><span class="checklist-icon" aria-hidden="true">03</span><span>Look for unusual requests</span></li>
+                  <li><span class="checklist-icon" aria-hidden="true">04</span><span>Verify through a trusted channel</span></li>
+                </ul>
+              </section>
+              <p class="training-safety"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.8 3 3.8v3.4c0 3.1 2.1 5.9 5 6.6 2.9-.7 5-3.5 5-6.6V3.8l-5-2Z" stroke="currentColor" stroke-width="1.2"/><path d="m5.9 7.8 1.4 1.4 2.8-2.8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Fictional examples only. No actions leave this page.</p>
+            </aside>
+            <div class="email-column">
+              <article class="email-card" aria-labelledby="email-subject">
+                <div class="email-card-top">
+                  <div class="email-label"><span class="email-label-icon" aria-hidden="true"><svg viewBox="0 0 20 20"><rect x="2.5" y="4" width="15" height="12" rx="2"/><path d="m3.5 5 6.5 5 6.5-5"/></svg></span> <span id="card-type-label">MESSAGE PREVIEW</span></div>
+                  <span class="fictional-badge"><span class="fictional-dot" aria-hidden="true"></span> <span id="card-badge-label">FICTIONAL EMAIL</span></span>
+                </div>
+                <div class="email-metadata">
+                  <div class="sender-avatar" id="sender-avatar" aria-hidden="true">S</div>
+                  <div class="sender-details"><strong id="sender-name"></strong><span id="sender-email"></span></div>
+                  <time class="email-date" id="email-date"></time>
+                </div>
+                <div class="email-subject-row"><span id="card-heading-label">Subject</span><h2 id="email-subject"></h2></div>
+                <div class="email-body" id="email-body"></div>
+                <div class="email-notice"><svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.4"/><path d="M9 8v4m0-6h.01" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg><span id="card-notice">This simulated message contains no clickable links or attachments.</span></div>
+              </article>
+              <section class="answer-panel" aria-labelledby="answer-title">
+                <div class="answer-prompt"><span class="answer-step" id="answer-step">01</span><div><h2 id="answer-title">What would you do?</h2><p id="answer-description">Choose the classification that best fits this message.</p></div></div>
+                <div class="answer-buttons" id="answer-buttons" role="group" aria-labelledby="answer-title"></div>
+                <div class="feedback-panel" id="feedback-panel" aria-live="polite" hidden>
+                  <div class="feedback-icon" id="feedback-icon" aria-hidden="true"></div>
+                  <div class="feedback-copy"><strong id="feedback-title"></strong><p id="feedback-explanation"></p><ul id="feedback-signals"></ul></div>
+                </div>
+                <div class="answer-footer"><span id="answer-hint">Take a moment to inspect the details.</span><button class="button button-primary continue-button" type="button" data-action="continue" hidden>Continue <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+              </section>
+            </div>
+          </div>
+          <footer class="page-footer"><span>SignalSafe <span class="footer-dot">·</span> Phishing Awareness Simulator</span><span>Practice safely. Stay alert.</span></footer>
+        </section>
+
+        <section class="view results-view" id="results-view" aria-labelledby="results-title" hidden>
+          <div class="results-card">
+            <div class="results-orbit" aria-hidden="true"><div class="result-shield"><svg viewBox="0 0 40 40" fill="none"><path d="M20 5 8 9.8v8.1c0 7.4 5.1 14.1 12 15.9 6.9-1.8 12-8.5 12-15.9V9.8L20 5Z" stroke="currentColor" stroke-width="2"/><path d="m15.5 19.5 3 3 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> TRAINING COMPLETE <span class="eyebrow-line"></span></p>
+            <h1 id="results-title">Nice work. <span>Keep that awareness sharp.</span></h1>
+            <p class="results-message" id="results-message"></p>
+            <div class="score-card">
+              <div class="score-main"><span>YOUR SCORE</span><strong><span id="final-score">0</span><small> / 100</small></strong><div class="score-meter"><span id="score-meter-fill"></span></div></div>
+              <div class="score-divider"></div>
+              <div class="score-stat"><span class="score-stat-icon correct-icon" aria-hidden="true">✓</span><div><strong id="correct-count">0</strong><span>Correct</span></div></div>
+              <div class="score-divider"></div>
+              <div class="score-stat"><span class="score-stat-icon incorrect-icon" aria-hidden="true">×</span><div><strong id="incorrect-count">0</strong><span>Incorrect</span></div></div>
+              <div class="score-divider"></div>
+              <div class="score-stat"><span class="score-stat-icon accuracy-icon" aria-hidden="true">%</span><div><strong id="accuracy-count">0%</strong><span>Accuracy</span></div></div>
+            </div>
+            <div class="recommendations">
+              <div><p class="eyebrow">TAKE IT WITH YOU</p><h2>Three habits worth keeping</h2></div>
+              <ul>
+                <li><span>01</span><p>Pause when a message creates urgency or asks for sensitive information.</p></li>
+                <li><span>02</span><p>Verify unexpected requests with the sender through a separate, trusted channel.</p></li>
+                <li><span>03</span><p>When in doubt, report the message using your organization's approved process.</p></li>
+              </ul>
+            </div>
+            <div class="results-actions"><button class="button button-primary" type="button" data-action="restart">Try again <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16.5 8A6.5 6.5 0 1 0 17 11m-.5-8v5h-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="button button-quiet" type="button" data-action="dashboard">Back to dashboard</button></div>
+          </div>
+          <footer class="page-footer"><span>SignalSafe <span class="footer-dot">·</span> Phishing Awareness Simulator</span><span>Educational use only <span class="footer-dot">·</span> Version 1.0</span></footer>
+        </section>
+      </main>
+    </div>
+    <div class="sr-only" id="announcement" aria-live="polite"></div>
+  </body>
+</html>
