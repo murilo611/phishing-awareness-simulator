@@ -29,15 +29,12 @@ An interactive cybersecurity training platform that helps users recognize common
 ```text
 phishing-awareness-simulator/
 ├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── assets/
+├── style.css
+├── script.js
 └── README.md
 ```
 
-The `assets/` directory is optional and is not needed by the current version.
+The files are kept in the repository root so they can be selected and uploaded together in the GitHub web interface.
 
 ## Run locally
 
@@ -51,7 +48,7 @@ Open `index.html` in a modern browser. No build step or server is required.
 4. Select the branch and `/ (root)` folder, then save.
 5. Open the Pages URL shown in the repository settings.
 
-All application files use relative paths, so the project can be hosted as a static site.
+The application uses relative paths, so the project can be hosted as a static site.
 
 ## Screenshots
 
